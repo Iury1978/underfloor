@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Теплый пол - приносим тепло в каждый дом</title>
+
+  <link rel="preload" href="fonts/inter-v12-cyrillic_latin-500.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/inter-v12-cyrillic_latin-regular.woff2" as="font" crossorigin>
+
+  <link rel="stylesheet" href="css/index.css">
+
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+  <script src="js/swiper-bundle.min.js" defer></script>
+  <script src="js/just-validate.production.min.js" defer></script>
+  <script src="js/inputmask.min.js" defer></script>
+
+  <script src="js/index.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="visually-hidden">Теплый пол - приносим тепло в каждый дом</h1>
+    <div class="container header__container">
+      <img src="img/logo.svg" alt="Логотип компании Тёплый пол" class="header__logo" width="162" height="39">
+      <button class="header__button button button_o js-order">Заказать</button>
+    </div>
+  </header>
+  <main class="main">
+    <section class="hero section-offset">
+      <div class="container hero__container">
+        <div class="hero__content gray-block">
+          <h2 class="title hero__title">Приносим тепло в&nbsp;каждый дом</h2>
+          <p class="hero__description">Устанавливаем теплые полы в&nbsp;квартирах, офисах и&nbsp;загородных домах.</p>
+          <a href="#calc" class="button hero__link">Рассчитать&nbsp;стоимость</a>
+        </div>
+
+        <div class="hero__slider-block">
+          <div class=" hero__slider swiper">
+            <div class=" hero__slider-wrapper swiper-wrapper">
+              <div class="swiper-slide">
+                <div class=" hero__image" style="background-image: url('/img/hero_img-01.jpg');">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class=" hero__image" style="background-image: url('/img/hero_img-02.jpg');">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class=" hero__image" style="background-image: url('/img/hero_img-03.jpg');">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class=" hero__image" style="background-image: url('/img/hero_img-04.jpg');">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class=" hero__image" style="background-image: url('/img/hero_img-05.jpg');">
+                </div>
+              </div>
+            </div>
+            <div class="hero__arrow">
+              <button class="hero__slider-btn hero__slider-btn_prev"></button>
+              <button class="hero__slider-btn hero__slider-btn_next"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages section-offset">
+      <div class="container">
+        <div class="advantages__container">
+          <h2 class="title advantages__title">Наши преимущества</h2>
+          <ul class="advantages__list">
+            <li class="advantages__item">Надежные материалы</li>
+            <li class="advantages__item">опытные монтажники</li>
+            <li class="advantages__item">Регулируемая температура пола</li>
+            <li class="advantages__item">Защита от замыканий</li>
+            <li class="advantages__item">Гарантия до 10 лет</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="calc" class="calc section-offset">
+      <div class="container calc__container">
+        <div class="calc__content gray-block">
+          <h2 class="title calc__title">Рассчитайте стоимость</h2>
+
+          <form class="calc__form js-calc-form">
+            <fieldset class="calc__fieldset calc__fieldset_size">
+              <label class="calc__wrapper-input calc__wrapper-input_size">
+                <span class="calc__text">Ширина помещения, м</span>
+                <input type="number" class="calc__input-number" name="width" required>
+              </label>
+              <label class="calc__wrapper-input calc__wrapper-input_size">
+                <span class="calc__text">Длина помещения, м</span>
+                <input type="number" class="calc__input-number" name="length" required>
+              </label>
+            </fieldset>
+            <fieldset class="calc__fieldset calc__fieldset_tariff">
+              <legend class="calc__text calc__text_legend">Тариф</legend>
+              <label class="calc__wrapper-input calc__wrapper-input_tariff">
+                <input class="calc__input-radio" type="radio" name="tariff" value="economy">
+                <span class="calc__label-radio">Эконом</span>
+              </label>
+              <label class="calc__wrapper-input calc__wrapper-input_tariff">
+                <input class="calc__input-radio" type="radio" name="tariff" value="comfort" checked>
+                <span class="calc__label-radio">Комфорт</span>
+              </label>
+              <label class="calc__wrapper-input calc__wrapper-input_tariff">
+                <input class="calc__input-radio" type="radio" name="tariff" value="premium">
+                <span class="calc__label-radio">Премиум</span>
+              </label>
+            </fieldset>
+            <button class="button calc__submit js-submit" disabled>Рассчитать</button>
+            <button class="calc__order button button_o js-order">Заказать</button>
+
+          </form>
+        </div>
+
+        <div class="calc__total">
+          <div class="calc__result-wrapper">
+            <p class="calc__result">
+              <span class="calc__text ">Площадь</span>
+              <span class="calc__result-text js-square"></span>
+            </p>
+            <p class="calc__result">
+              <span class="calc__text">Примерная стоимость</span>
+              <span class="calc__result-text js-total-price"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer section-offset ">
+    <div class="container footer__container">
+      <img src="img/logo.svg" alt="Логотип компании Тёплый пол" class="footer__logo" width="162" height="39">
+
+      <ul class="footer__list footer__list_social">
+        <li class="footer__item footer__item_social">
+          <a href="#!" class="footer__link" aria-label="наш канал в youtube">
+            <svg class="svg-pic svg-pic_youtube ">
+              <use xlink:href="img/sprite.svg#youtube" />
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item footer__item_social">
+          <a href="#!" class="footer__link" aria-label="наша група в Телеграм">
+            <svg class="svg-pic">
+              <use xlink:href="img/sprite.svg#telegram" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="footer__list footer__list_contact">
+        <li class="footer__item">
+          <a href="tel:+37384973801" class="footer__link footer__link_contact">
+            <svg class="svg-pic">
+              <use xlink:href="img/sprite.svg#phone" />
+            </svg>
+            <span>+373 849 73 801</span>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="mailto:Teplyipol@gmail.com" class="footer__link footer__link_contact">
+            <svg class="svg-pic">
+              <use xlink:href="img/sprite.svg#email" />
+            </svg>
+            <span>Teplyipol@gmail.com</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer__copyright"> &copy; Теплый пол, 2023 </p>
+
+      <ul class="footer__list footer__list_developer">
+        <li class="footer__item">
+          Designer:
+          <a href="https://t.me/12345" target="_blank" class="footer__link">Anastasia Ilina</a>
+        </li>
+        <li class="footer__item">
+          Developer:
+          <a href="https://t.me/54321" target="_blank" class="footer__link">Iurii Gresiucovici</a>
+        </li>
+      </ul>
+
+    </div>
+  </footer>
+  <div class="modal">
+    <div class="modal__main">
+      <div class="modal__container">
+        <div class="modal__content">
+          <h2 class="modal__title title">Оставьте заявку и&nbsp;мы&nbsp;перезвоним</h2>
+          <p class="modal__subtitle">наши мастера свяжутся с&nbsp;вами в&nbsp;течение 3 часов</p>
+
+          <form class="modal__form">
+            <fieldset class="modal__fieldset">
+              <label class="modal__wrapper-input">
+                <span class="modal__text">Имя</span>
+                <input type="text" class="modal__input" name="name" id="name">
+              </label>
+
+              <label class="modal__wrapper-input">
+                <span class="modal__text">Телефон</span>
+                <input type="tel" class="modal__input" name="phone" id="phone">
+              </label>
+            </fieldset>
+            <button type="submit" class="modal__submit button">Отправить</button>
+          </form>
+        </div>
+      </div>
+
+      <button class="modal__close">
+        <svg class="svg-pic svg-pic_modal-close">
+          <use xlink:href="img/sprite.svg#modal-close" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>
